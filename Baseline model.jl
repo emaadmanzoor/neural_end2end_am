@@ -30,7 +30,7 @@ function read_conll(pathtofile)
     label_ids = Int16[]
         
     #parsing CoNLL formatted data
-    open(pathtofile) do file
+    open(pathtofile,"r") do file
         for ln in eachline(file)
             if length(ln) == 0   
                 if length(word_ids) != 0 && length(label_ids) != 0
